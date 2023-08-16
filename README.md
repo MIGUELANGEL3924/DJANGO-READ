@@ -18,3 +18,8 @@ pip install django-cors-headers
 'corsheaders.middleware.CorsMiddleware',
 # al final de settings.py agregamos esto
 CORS_ALLOWED_ORIGINS = []
+# cree mi superusuario
+python manage.py createsuperuser
+# añadimos un modulo que documente nuestra aplicacion
+pip install coreapi
+
