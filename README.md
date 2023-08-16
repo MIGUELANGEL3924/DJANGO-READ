@@ -22,4 +22,20 @@ CORS_ALLOWED_ORIGINS = []
 python manage.py createsuperuser
 # añadimos un modulo que documente nuestra aplicacion
 pip install coreapi
+# creamos nuestro frontend
+npm create vite
+elegimos como nombre de nuestro proyecto client, luego elegimos React y por ultimo javascript
+cd client
+npm install
+npm run dev
+# instalamos el modulo react-router-dom para tener multiples paginas 
+# instalamos el modulo react-hot-toast para recibir mensajes cuando eliminemos algo
+# instalamos el modulo axios que nos sirve para hacer peticiones
+# instalamos el modulo react-hook-form que nos permitira validar el input que creemos en el frontend
+npm i react-router-dom react-hot-toast axios react-hook-form
+# modificamos los archivos App.jsx , App.css y el index.css
+# en src creamos las carpetas api ,components y pages
+# en la carpeta pages creamos los archivos TasksPage.jsx y TaskFormPage.jsx 
+# creamos nuestras rutas en App.jsx
+# en la carpeta components creo el archivo Navigation.jsx
 
