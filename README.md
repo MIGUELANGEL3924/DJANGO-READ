@@ -37,5 +37,6 @@ npm i react-router-dom react-hot-toast axios react-hook-form
 # en src creamos las carpetas api ,components y pages
 # en la carpeta pages creamos los archivos TasksPage.jsx y TaskFormPage.jsx 
 # creamos nuestras rutas en App.jsx
-# en la carpeta components creo el archivo Navigation.jsx
+# en la carpeta components creo el archivo Navigation.jsx, TaskCard.jsx y TaskList.jsx
+# en la carpeta api creo el archivo tasks.api.js
 
