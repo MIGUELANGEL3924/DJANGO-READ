@@ -12,10 +12,10 @@ export function TaskFormPage() {
   } = useForm();
   const navigate = useNavigate();
   const params = useParams();
-  console.log(params);
+
   const onSubmit = handleSubmit(async (data) => {
     if (params.id) {
-      console.log("actualizando");
+      await updateTask(params.id, data);
     } else {
       await createTask(data);
     }
@@ -25,9 +25,11 @@ export function TaskFormPage() {
   useEffect(() => {
     async function LoadTask() {
       if (params.id) {
-        const res = await getTask(params.id);
-        setValue("title", res.data.title);
-        setValue("description", res.data.description);
+        const {
+          data: { title, description },
+        } = await getTask(params.id);
+        setValue("title", title);
+        setValue("description", description);
       }
     }
     LoadTask();
