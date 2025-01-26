@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { createTask, deleteTask, updateTask, getTask } from "../api/tasks.api";
 import { useNavigate, useParams } from "react-router-dom";
+import {} from "react-hot-toast";
 
 export function TaskFormPage() {
   const {
@@ -18,6 +19,13 @@ export function TaskFormPage() {
       await updateTask(params.id, data);
     } else {
       await createTask(data);
+      toast.success("tarea actualizada", {
+        position: "bottom-right",
+        style: {
+          background: "#101010",
+          color: "#fff",
+        },
+      });
     }
     navigate("/tasks");
   });
@@ -60,6 +68,13 @@ export function TaskFormPage() {
             const accepted = window.confirm("are you sure ?");
             if (accepted) {
               await deleteTask(params.id);
+              toast.success("tarea eliminada", {
+                position: "bottom-right",
+                style: {
+                  background: "#101010",
+                  color: "#fff",
+                },
+              });
               navigate("/tasks");
             }
           }}
